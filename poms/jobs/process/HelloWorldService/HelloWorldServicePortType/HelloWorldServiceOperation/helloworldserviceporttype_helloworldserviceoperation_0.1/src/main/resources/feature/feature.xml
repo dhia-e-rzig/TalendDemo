@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.0.0" name="HelloWorldServicePortType_HelloWorldServiceOperation-feature">
+    <feature name="HelloWorldServicePortType_HelloWorldServiceOperation-feature" version="0.1.0">
+        <bundle>mvn:org.example.local_project.job/HelloWorldServicePortType_HelloWorldServiceOperation/0.1.0</bundle>
+        <config name="HelloWorldServicePortType_HelloWorldServiceOperation.talendcontext.Default">
+</config>
+    </feature>
+</features>

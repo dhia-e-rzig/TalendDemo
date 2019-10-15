@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:Services="http://www.talend.org/Services">
+  <Services:ServiceConnection xmi:id="_b_ypUORlEemu7oqXUjggNw" WSDLPath="/Applications/TOS_ESB-20190620_1446-V7.2.1/Studio/workspace/LOCAL_PROJECT/services/HelloWorldService_0.1.wsdl" servicePort="_b_ypUeRlEemu7oqXUjggNw"/>
+  <Services:ServicePort xmi:id="_b_ypUeRlEemu7oqXUjggNw" name="HelloWorldServicePortType" id="_b_yCQORlEemu7oqXUjggNw" serviceOperation="_b_ypUuRlEemu7oqXUjggNw"/>
+  <Services:ServiceOperation xmi:id="_b_ypUuRlEemu7oqXUjggNw" label="HelloWorldServiceOperation-HelloWorldServicePortType_HelloWorldServiceOperation" name="HelloWorldServiceOperation" id="_b_yCQeRlEemu7oqXUjggNw" referenceJobId="_npCkYORlEemu7oqXUjggNw"/>
+</xmi:XMI>

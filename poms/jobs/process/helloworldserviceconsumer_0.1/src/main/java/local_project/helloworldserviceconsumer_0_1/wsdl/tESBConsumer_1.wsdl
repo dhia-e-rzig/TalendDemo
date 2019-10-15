@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="HelloWorldService" targetNamespace="http://www.talend.org/service/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.talend.org/service/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.talend.org/service/">
+			<xsd:element name="HelloWorldServiceOperationRequest">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="in" type="xsd:string"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="HelloWorldServiceOperationResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="out" type="xsd:string"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldServiceOperationRequest">
+    <wsdl:part name="parameters" element="tns:HelloWorldServiceOperationRequest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="HelloWorldServiceOperationResponse">
+    <wsdl:part name="parameters" element="tns:HelloWorldServiceOperationResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="HelloWorldServicePortType">
+    <wsdl:operation name="HelloWorldServiceOperation">
+      <wsdl:input message="tns:HelloWorldServiceOperationRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:HelloWorldServiceOperationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="HelloWorldServiceBinding" type="tns:HelloWorldServicePortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="HelloWorldServiceOperation">
+      <soap:operation soapAction="http://www.talend.org/service/HelloWorldServiceOperation"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="HelloWorldService">
+    <wsdl:port name="HelloWorldServicePort" binding="tns:HelloWorldServiceBinding">
+      <soap:address location="http://localhost:8090/services/HelloWorldService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
